@@ -6,9 +6,9 @@
             "eNumber": "E/yy/xxx"
         },
         {
-            "name": "Team Member Name 2",
-            "email": "email@eng.pdn.ac.lk",
-            "eNumber": "E/yy/xxx"
+            "name": "Gunathilaka S.P.A.U",
+            "email": "e17101@eng.pdn.ac.lk",
+            "eNumber": "E/17/101"
         },
         {
             "name": "Team Member Name 3",
@@ -18,12 +18,16 @@
     ],
     "supervisors": [
         {
-            "name": "Dr. Supervisor 1",
-            "email": "email@eng.pdn.ac.lk"
+            "name": "Dr.Damayanthi Herath",
+            "email": "damayanthiherath@eng.pdn.ac.lk"
         },
         {
-            "name": "Dr. Supervisor 2",
-            "email": "email@eng.pdn.ac.lk"
+            "name": "Dr.Manjula Sandirigama",
+            "email": "manjula.sandirigama@eng.pdn.ac.lk"
+        },
+        {
+            "name": "Dr.Darshana Jayasinghe",
+            "email": "darshana.jayasinghe@gmail.com"
         }
     ],
     "media": [
