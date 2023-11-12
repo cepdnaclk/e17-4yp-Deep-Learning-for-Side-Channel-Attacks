@@ -21,14 +21,16 @@ Eg;<br>
 <p align="center">
   <img src="./docs/images/SCA.png" alt="Diagram showing SCA">
 </p>
-___
+
+<hr>
 
 ## Power Analysis Attacks
 A power analysis attack is a type of side-channel attack that targets cryptographic systems and devices by analyzing variations in power consumption during their operation. These attacks exploit the fact that the power consumption of a device, such as a smart card or a hardware security module, can reveal information about the internal operations and data being processed. By carefully monitoring and analyzing these power fluctuations, attackers can infer sensitive information, such as encryption keys or cryptographic algorithms used in a secure device. Power analysis attacks can be particularly concerning for systems that rely on cryptographic protection and have led to the development of countermeasures to mitigate their effectiveness, such as masking, shuffling, or other cryptographic techniques to obscure power signatures.
 <p align="center">
   <img src="./docs/images/Power Analysis Attacks.png" alt="Diagram showing SCA">
 </p>
-___
+
+<hr>
 
 ## Countermeasures
 Countermeasures against power analysis attacks are security techniques and practices designed to protect cryptographic systems and devices from being vulnerable to power analysis. These countermeasures aim to make it more challenging for attackers to extract sensitive information by analyzing power consumption variations during the operation of the device. Here are some common countermeasures:
@@ -44,7 +46,8 @@ Countermeasures against power analysis attacks are security techniques and pract
     + In constant-time implementations, the execution time of cryptographic operations remains constant regardless of the input data. This makes it more difficult for attackers to deduce information from the timing of power consumption.
 6. Secure Hardware
     + Using secure hardware components that are specifically designed to resist power analysis attacks, such as tamper-resistant modules and secure elements, can provide an additional layer of protection.
-___
+
+<hr>
 
 ## Runtime Frequency Tuning Countermeasure
 Runtime Frequency Tuning Countermeasure (RFTC) is a random execution time countermeasure based on frequency randomization. In RFTC, the clock frequencies are chosen randomly from 3,702 distinct clock frequencies (arranged in 1024 X 3 groups) which are chosen carefully and fixed during design time. These selections are dobe at runtime to mitigate the vulnerabilities of power analysis attacks in FPGAs. to mitigate power analysis attack vulnerabilities of FPGAs. RFTC uses dynamic reconfiguration of clock managers of FPGAs (such as Xilinx Mixed-Mode Clock Manager - MMCM) to generate the desired clock frequencies within FPGA to run cryptographic circuits. No other countermeasure has been proved secure against Dynamic Time  Warping   based  CPA  attacks (DTW-CPA), Principal Component  Analysis   based  CPA  attacks (PCA-CPA) and Fast   Fourier   Transform based  CPA  attacks (FFT-CPA) except for RFTC. But, RFTC was not tested against deep learning based SCAs.
