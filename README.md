@@ -52,4 +52,10 @@ Countermeasures against power analysis attacks are security techniques and pract
 ## Runtime Frequency Tuning Countermeasure
 Runtime Frequency Tuning Countermeasure (RFTC) is a random execution time countermeasure based on frequency randomization. In RFTC, the clock frequencies are chosen randomly from 3,702 distinct clock frequencies (arranged in 1024 X 3 groups) which are chosen carefully and fixed during design time. These selections are dobe at runtime to mitigate the vulnerabilities of power analysis attacks in FPGAs. to mitigate power analysis attack vulnerabilities of FPGAs. RFTC uses dynamic reconfiguration of clock managers of FPGAs (such as Xilinx Mixed-Mode Clock Manager - MMCM) to generate the desired clock frequencies within FPGA to run cryptographic circuits. No other countermeasure has been proved secure against Dynamic Time  Warping   based  CPA  attacks (DTW-CPA), Principal Component  Analysis   based  CPA  attacks (PCA-CPA) and Fast   Fourier   Transform based  CPA  attacks (FFT-CPA) except for RFTC. But, RFTC was not tested against deep learning based SCAs.
 
+<hr>
 
+## AISY Framework
+AISY is a deep learning-based framework for profiling side-channel analysis. It enables the users to run the analyses and report the results 
+efficiently. Speciality of this framework is that, it maintain reproducible nature of analysis results. Current framework version is 1.0 and it's open-source. Currently, AISY framework supports deep 
+learning-based SCA for the AES cipher with 128-bit 
+key. It supports 5 datasets which are namely, ASCAD Fixed Key, ASCAD Random Keys, CHES CTF 2018, AES HD and AES HD ext. We can use custom datasets also but, those should be in .h5 format. In AISY framework we can use standard metrics like Guessing Entropy, Success Rate, Accuracy and Loss to measure the success of the attcks. It also have some state-of-art deep learning architectures which are used for SCA and supports 4 different leakage models namely, Bit, Hamming Weight, Hamming Distance and Identity. Moreover, it provides a web application in which we can view the scripts, results of attacks and documentation.
