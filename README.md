@@ -10,7 +10,7 @@ ___
 
 ## Side Channel Attacks
 A side-channel attack is a type of security vulnerability or attack that targets a computer system or cryptographic algorithm by exploiting unintended information leakage from various channels, such as power consumption, electromagnetic radiation, timing, or even sound. These attacks do not typically target the core algorithm or the encryption keys directly but instead focus on the observable side-effects of a system's operation. By analyzing these side-channel information leaks, attackers can potentially deduce sensitive information like encryption keys or data. Side-channel attacks can be a significant threat to the security of systems and are a critical consideration in the design and evaluation of secure hardware and software implementations.<br>
-Eg;<br>
+Eg;
 + Power Analysis Attacks
 + Differential Power Analysis (DPA)
 + Simple Power Analysis (SPA)
