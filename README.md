@@ -6,6 +6,7 @@
 + [AISY Framework](#AISY)
 + [Power Traces](#power_traces)
 + [Create H5 dataset](#create_h5)
++ [Attacking unprotected AES](#attack_unprotected_aes)
 
 ___
 
@@ -86,4 +87,15 @@ Power traces were collected by Dr.Darshana Jayasinghe, one of the supervisors of
 We used a python program to divide traces, cipher text, plain text and keys into two sets; profiling and attacking. Another python program was used to convert plain text, cipher text and keys which were in string format to integer format and create the H5 format dataset.
 <p align="center">
   <img src="./docs/images/create_h5.png" alt="Diagram showing SCA" width="600" height="180">
+</p>
+
+<hr>
+
+## Attacking unprotected AES <a name="attack_unprotected_aes"></a>
+To find the most suitable model and parameters to attack the target system, we first attacked the system before using RFTC countermeasure on it (unprotected AES). For that we used the built in MLP and CNN models in AISY framework. First we attacked using the complete traces but, the success rate was less than 5%. Then we used only samples correspondng to two rounds of AES to attack different key bytes. By doing so, we were able to successfully attack most of the key bytes. We were able to attack all the key bytes except for key byte 2, 8, 9, 10 and 12 with 99% or 100% success rate. Following figures show a Guessing Entropy plot and a Success rate plot of a successful attack.
+<p align="center">
+  <img src="./docs/images/guessing_entropy_241.png" alt="Diagram showing SCA" width="440" height="250">
+</p>
+<p align="center">
+  <img src="./docs/images/success_rate_241.png" alt="Diagram showing SCA" width="440" height="250">
 </p>
