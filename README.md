@@ -1,18 +1,10 @@
 ## Table of Contents
-+ [Introduction](#introduction)
 + [Side Channel Attacks](#side_channel_attacks)
 + [Power Analysis Attacks](#power_analysis_attacks)
 + [Countermeasures](#countermeasures)
 + [Runtime Frequency Tuning Countermeasure](#RFTC)
 + [AISY Framework](#AISY)
-___
-## Introduction <a name="introduction"></a>
-Side-channel attacks (SCAs) pose a significant threat to the security of cryptographic systems, as they exploit unintended information leakage through side channels such as power consumption, timing variations, or electromagnetic radiation. These attacks aim to extract sensitive information, like secret keys, by analyzing the physical implementations (as mentioned above) of a cryptographic device rather than directly breaking the algorithm.<br>
-In recent years, deep learning (DL) techniques have gained considerable attention and success in various fields, and domains. When we speak about Deep Learning algorithms, we have Recurrent Neural Networks (RNNs), Long Short Term Memory (LSTM), Generative Adversarial Networks (GANs), Reinforcement Learning (RL), Deep neural networks (DNNs), Convolutional neural networks (CNNs) etc. Each algorithm has its own strengths and applications. The choice of algorithm depends on the nature of the problem or issue and the characteristics of the data. But most of the cases have been captured by Deep neural networks (DNNs) and
-Convolutional Neural Networks (CNNs). Both algorithms have shown remarkable capabilities in capturing complex patterns and extracting meaningful features from high-dimensional data. When we went through related researches or publications Convolutional Neural Networks has played a major role.<br>
-Deep Learning based SCA attacks leverage the power of neural networks to learn the complex relationship between the observed side-channel leakage and the underlying secret key even without knowing the algorithm. By training DL models on large amount of datasets of side-channel measurements or traces, these attacks can enhance the efficiency and accuracy of information extraction, even in the presence of countermeasures.To train DL models, it requires substantial amounts of labeled training data, which may be costly or time-consuming to obtain.But, currently its not a big issue since some research in this field have already addressed these issues.<br>
-This field, Deep Learning based SCA attacks is rapidly evolving, and numerous research papers have been published.These papers explore various aspects, including the design and architecture of DL models, the impact of different network configurations on attack performance, and the effectiveness of DL-based attacks against different cryptographic devices and countermeasures.<br>
-We expect to test RFTC against ASCAD, AISY and SCAAML frmework, improve MLP andd CNN models to attack RFTC and also attack other block cipher circuit (PRESENT, Simon, Speck etc ...) using the developed CNN or MLP models.
+
 ___
 
 ## Side Channel Attacks <a name="side_channel_attacks"></a>
@@ -41,17 +33,17 @@ A power analysis attack is a type of side-channel attack that targets cryptograp
 
 ## Countermeasures <a name="countermeasures"></a>
 Countermeasures against power analysis attacks are security techniques and practices designed to protect cryptographic systems and devices from being vulnerable to power analysis. These countermeasures aim to make it more challenging for attackers to extract sensitive information by analyzing power consumption variations during the operation of the device. Here are some common countermeasures:
-1. Randomization Techniques
+1. **Randomization Techniques**
     + These involve introducing randomness into the power consumption profile to make it harder for attackers to discern patterns. This can include adding random delays, randomizing the order of operations, or introducing noise into power traces.
-2. Masking
+2. **Masking**
     + Masking techniques involve splitting sensitive data or operations into multiple shares, and each share is processed separately. This helps obscure the power signature associated with the secret data. The final result is then derived by combining the shares.
-3. Shuffling
+3. **Shuffling**
     + Shuffling techniques reorder the execution of cryptographic operations to hide power consumption patterns. By varying the order of operations, attackers find it more difficult to correlate power fluctuations with specific actions.
-4. Differential Power Analysis (DPA) Resistance
+4. **Differential Power Analysis (DPA) Resistance**
     + DPA-resistant designs are created with the goal of minimizing the correlation between power consumption and sensitive data. This may involve using algorithms and hardware implementations that are less susceptible to DPA attacks.
-5. Constant-Time Implementations
+5. **Constant-Time Implementations**
     + In constant-time implementations, the execution time of cryptographic operations remains constant regardless of the input data. This makes it more difficult for attackers to deduce information from the timing of power consumption.
-6. Secure Hardware
+6. **Secure Hardware**
     + Using secure hardware components that are specifically designed to resist power analysis attacks, such as tamper-resistant modules and secure elements, can provide an additional layer of protection.
 
 <hr>
@@ -66,3 +58,22 @@ AISY is a deep learning-based framework for profiling side-channel analysis. It 
 efficiently. Speciality of this framework is that, it maintain reproducible nature of analysis results. Current framework version is 1.0 and it's open-source. Currently, AISY framework supports deep 
 learning-based SCA for the AES cipher with 128-bit 
 key. It supports 5 datasets which are namely, ASCAD Fixed Key, ASCAD Random Keys, CHES CTF 2018, AES HD and AES HD ext. We can use custom datasets also but, those should be in .h5 format. In AISY framework we can use standard metrics like Guessing Entropy, Success Rate, Accuracy and Loss to measure the success of the attcks. It also have some state-of-art deep learning architectures which are used for SCA and supports 4 different leakage models namely, Bit, Hamming Weight, Hamming Distance and Identity. Moreover, it provides a web application in which we can view the scripts, results of attacks and documentation.
+
+<hr>
+
+## Power Traces
+Power traces wer collected by Dr.Darshana Jayasinghe, one of the supervisors of the project at University of Sydney. He has used a FPGA prototyping board with an isolated power line and a signal amplifier. Both unprotected and RFTC protected power traces were obtained through this implementation. He has used one program to send secret key and random plain texts and receive the cipher text and another program to save plaintext, ciphertext, power traces and also key, because we want to verify if we received the key. The collected power traces were saved in a binary file.<br>
+
+**Traces from unprotected AES**
++ There is no randomness in frequency
++ Seperate rounds of AES are visually identifiable
+<p align="center">
+  <img src="./docs/images/unprotected_trace.png" alt="Diagram showing SCA" width="600" height="400">
+</p>
+
+**Traces from RFTC protected AES**
++ There is a very high randomness in frequencies
++ Hard to identify seperate rounds distinctly
+<p align="center">
+  <img src="./docs/images/protected_trace.png" alt="Diagram showing SCA" width="600" height="400">
+</p>
