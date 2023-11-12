@@ -19,7 +19,7 @@ Eg;<br>
 + Acoustic Cryptanalysis
 
 <p align="center">
-  <img src="./docs/images/SCA.png" alt="Diagram showing SCA" width="200" height="150">
+  <img src="./docs/images/SCA.png" alt="Diagram showing SCA" width="400" height="200">
 </p>
 
 <hr>
