@@ -64,7 +64,7 @@ key. It supports 5 datasets which are namely, ASCAD Fixed Key, ASCAD Random Keys
 <hr>
 
 ## Power Traces <a name="power_traces"></a>
-Power traces wer collected by Dr.Darshana Jayasinghe, one of the supervisors of the project at University of Sydney. He has used a FPGA prototyping board with an isolated power line and a signal amplifier. Both unprotected and RFTC protected power traces were obtained through this implementation. He has used one program to send secret key and random plain texts and receive the cipher text and another program to save plaintext, ciphertext, power traces and also key, because we want to verify if we received the key. The collected power traces were saved in a binary file.<br>
+Power traces were collected by Dr.Darshana Jayasinghe, one of the supervisors of the project at University of Sydney. He has used a FPGA prototyping board with an isolated power line and a signal amplifier. Both unprotected and RFTC protected power traces were obtained through this implementation. He has used one program to send secret key and random plain texts and receive the cipher text and another program to save plaintext, ciphertext, power traces and also key, because we want to verify if we received the key. The collected power traces were saved in a binary file.<br>
 
 **Traces from unprotected AES**
 + There is no randomness in frequency
