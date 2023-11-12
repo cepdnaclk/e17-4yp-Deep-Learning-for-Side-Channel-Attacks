@@ -4,6 +4,8 @@
 + [Countermeasures](#countermeasures)
 + [Runtime Frequency Tuning Countermeasure](#RFTC)
 + [AISY Framework](#AISY)
++ [Power Traces](#power_traces)
++ [Create H5 dataset](#create_h5)
 
 ___
 
@@ -61,7 +63,7 @@ key. It supports 5 datasets which are namely, ASCAD Fixed Key, ASCAD Random Keys
 
 <hr>
 
-## Power Traces
+## Power Traces <a name="power_traces"></a>
 Power traces wer collected by Dr.Darshana Jayasinghe, one of the supervisors of the project at University of Sydney. He has used a FPGA prototyping board with an isolated power line and a signal amplifier. Both unprotected and RFTC protected power traces were obtained through this implementation. He has used one program to send secret key and random plain texts and receive the cipher text and another program to save plaintext, ciphertext, power traces and also key, because we want to verify if we received the key. The collected power traces were saved in a binary file.<br>
 
 **Traces from unprotected AES**
@@ -76,4 +78,12 @@ Power traces wer collected by Dr.Darshana Jayasinghe, one of the supervisors of 
 + Hard to identify seperate rounds distinctly
 <p align="center">
   <img src="./docs/images/protected_trace.png" alt="Diagram showing SCA" width="550" height="275">
+</p>
+
+<hr>
+
+## Creating H5 dataset <a name="create_h5"></a>
+We used a python program to divide traces, cipher text, plain text and keys into two sets; profiling and attacking. Another python program was used to convert plain text, cipher text and keys which were in string format to integer format and create the H5 format dataset.
+<p align="center">
+  <img src="./docs/images/create_h5.png" alt="Diagram showing SCA" width="550" height="275">
 </p>
