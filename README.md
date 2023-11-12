@@ -68,12 +68,12 @@ Power traces wer collected by Dr.Darshana Jayasinghe, one of the supervisors of 
 + There is no randomness in frequency
 + Seperate rounds of AES are visually identifiable
 <p align="center">
-  <img src="./docs/images/unprotected_trace.png" alt="Diagram showing SCA" width="500" height="250">
+  <img src="./docs/images/unprotected_trace.png" alt="Diagram showing SCA" width="550" height="275">
 </p>
 
 **Traces from RFTC protected AES**
 + There is a very high randomness in frequencies
 + Hard to identify seperate rounds distinctly
 <p align="center">
-  <img src="./docs/images/protected_trace.png" alt="Diagram showing SCA" width="500" height="250">
+  <img src="./docs/images/protected_trace.png" alt="Diagram showing SCA" width="550" height="275">
 </p>
