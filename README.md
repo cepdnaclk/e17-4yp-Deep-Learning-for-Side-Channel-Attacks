@@ -1,5 +1,12 @@
+## Table of Contents
++ [Introduction](#introduction)
++ [Side Channel Attacks](#side_channel_attacks)
++ [Power Analysis Attacks](#power_analysis_attacks)
++ [Countermeasures](#countermeasures)
++ [Runtime Frequency Tuning Countermeasure](#RFTC)
++ [AISY Framework](#AISY)
 ___
-## Introduction
+## Introduction <a name="introduction"></a>
 Side-channel attacks (SCAs) pose a significant threat to the security of cryptographic systems, as they exploit unintended information leakage through side channels such as power consumption, timing variations, or electromagnetic radiation. These attacks aim to extract sensitive information, like secret keys, by analyzing the physical implementations (as mentioned above) of a cryptographic device rather than directly breaking the algorithm.<br>
 In recent years, deep learning (DL) techniques have gained considerable attention and success in various fields, and domains. When we speak about Deep Learning algorithms, we have Recurrent Neural Networks (RNNs), Long Short Term Memory (LSTM), Generative Adversarial Networks (GANs), Reinforcement Learning (RL), Deep neural networks (DNNs), Convolutional neural networks (CNNs) etc. Each algorithm has its own strengths and applications. The choice of algorithm depends on the nature of the problem or issue and the characteristics of the data. But most of the cases have been captured by Deep neural networks (DNNs) and
 Convolutional Neural Networks (CNNs). Both algorithms have shown remarkable capabilities in capturing complex patterns and extracting meaningful features from high-dimensional data. When we went through related researches or publications Convolutional Neural Networks has played a major role.<br>
@@ -8,15 +15,15 @@ This field, Deep Learning based SCA attacks is rapidly evolving, and numerous re
 We expect to test RFTC against ASCAD, AISY and SCAAML frmework, improve MLP andd CNN models to attack RFTC and also attack other block cipher circuit (PRESENT, Simon, Speck etc ...) using the developed CNN or MLP models.
 ___
 
-## Side Channel Attacks
+## Side Channel Attacks <a name="side_channel_attacks"></a>
 A side-channel attack is a type of security vulnerability or attack that targets a computer system or cryptographic algorithm by exploiting unintended information leakage from various channels, such as power consumption, electromagnetic radiation, timing, or even sound. These attacks do not typically target the core algorithm or the encryption keys directly but instead focus on the observable side-effects of a system's operation. By analyzing these side-channel information leaks, attackers can potentially deduce sensitive information like encryption keys or data. Side-channel attacks can be a significant threat to the security of systems and are a critical consideration in the design and evaluation of secure hardware and software implementations.<br>
 Eg;
-<p>&nbsp;&nbsp;Power Analysis Attacks</p>
-<p>&nbsp;&nbsp;Differential Power Analysis (DPA)</p>
-<p>&nbsp;&nbsp;Simple Power Analysis (SPA)</p>
-<p>&nbsp;&nbsp;Timing Attacks</p>
-<p>&nbsp;&nbsp;Electromagnetic Radiation Analysis (e.g., Van Eck phreaking)</p>
-<p>&nbsp;&nbsp;Acoustic Cryptanalysis</p>
++ Power Analysis Attacks
++ Differential Power Analysis (DPA)
++ Simple Power Analysis (SPA)
++ Timing Attacks
++ Electromagnetic Radiation Analysis (e.g., Van Eck phreaking)
++  Acoustic Cryptanalysis
 
 <p align="center">
   <img src="./docs/images/SCA.png" alt="Diagram showing SCA" width="500" height="250">
@@ -24,7 +31,7 @@ Eg;
 
 <hr>
 
-## Power Analysis Attacks
+## Power Analysis Attacks <a name="power_analysis_attacks"></a>
 A power analysis attack is a type of side-channel attack that targets cryptographic systems and devices by analyzing variations in power consumption during their operation. These attacks exploit the fact that the power consumption of a device, such as a smart card or a hardware security module, can reveal information about the internal operations and data being processed. By carefully monitoring and analyzing these power fluctuations, attackers can infer sensitive information, such as encryption keys or cryptographic algorithms used in a secure device. Power analysis attacks can be particularly concerning for systems that rely on cryptographic protection and have led to the development of countermeasures to mitigate their effectiveness, such as masking, shuffling, or other cryptographic techniques to obscure power signatures.
 <p align="center">
   <img src="./docs/images/Power Analysis Attacks.png" alt="Diagram showing SCA">
@@ -32,7 +39,7 @@ A power analysis attack is a type of side-channel attack that targets cryptograp
 
 <hr>
 
-## Countermeasures
+## Countermeasures <a name="countermeasures"></a>
 Countermeasures against power analysis attacks are security techniques and practices designed to protect cryptographic systems and devices from being vulnerable to power analysis. These countermeasures aim to make it more challenging for attackers to extract sensitive information by analyzing power consumption variations during the operation of the device. Here are some common countermeasures:
 1. Randomization Techniques
     + These involve introducing randomness into the power consumption profile to make it harder for attackers to discern patterns. This can include adding random delays, randomizing the order of operations, or introducing noise into power traces.
@@ -49,12 +56,12 @@ Countermeasures against power analysis attacks are security techniques and pract
 
 <hr>
 
-## Runtime Frequency Tuning Countermeasure
+## Runtime Frequency Tuning Countermeasure <a name="RFTC"></a>
 Runtime Frequency Tuning Countermeasure (RFTC) is a random execution time countermeasure based on frequency randomization. In RFTC, the clock frequencies are chosen randomly from 3,702 distinct clock frequencies (arranged in 1024 X 3 groups) which are chosen carefully and fixed during design time. These selections are dobe at runtime to mitigate the vulnerabilities of power analysis attacks in FPGAs. to mitigate power analysis attack vulnerabilities of FPGAs. RFTC uses dynamic reconfiguration of clock managers of FPGAs (such as Xilinx Mixed-Mode Clock Manager - MMCM) to generate the desired clock frequencies within FPGA to run cryptographic circuits. No other countermeasure has been proved secure against Dynamic Time  Warping   based  CPA  attacks (DTW-CPA), Principal Component  Analysis   based  CPA  attacks (PCA-CPA) and Fast   Fourier   Transform based  CPA  attacks (FFT-CPA) except for RFTC. But, RFTC was not tested against deep learning based SCAs.
 
 <hr>
 
-## AISY Framework
+## AISY Framework <a name="AISY"></a>
 AISY is a deep learning-based framework for profiling side-channel analysis. It enables the users to run the analyses and report the results 
 efficiently. Speciality of this framework is that, it maintain reproducible nature of analysis results. Current framework version is 1.0 and it's open-source. Currently, AISY framework supports deep 
 learning-based SCA for the AES cipher with 128-bit 
