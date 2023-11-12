@@ -85,5 +85,5 @@ Power traces wer collected by Dr.Darshana Jayasinghe, one of the supervisors of 
 ## Creating H5 dataset <a name="create_h5"></a>
 We used a python program to divide traces, cipher text, plain text and keys into two sets; profiling and attacking. Another python program was used to convert plain text, cipher text and keys which were in string format to integer format and create the H5 format dataset.
 <p align="center">
-  <img src="./docs/images/create_h5.png" alt="Diagram showing SCA" width="500" height="200">
+  <img src="./docs/images/create_h5.png" alt="Diagram showing SCA" width="500" height="150">
 </p>
