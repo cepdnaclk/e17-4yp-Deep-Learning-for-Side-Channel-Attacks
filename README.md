@@ -99,3 +99,20 @@ To find the most suitable model and parameters to attack the target system, we f
 <p align="center">
   <img src="./docs/images/success_rate_241.png" alt="Diagram showing SCA" width="440" height="250">
 </p>
+
+<hr>
+
+## Attacking RFTC protected AES <a name="attack_protected_aes"></a>
+
+After attacking unprotected traces we got some experience on how deal with traces. But for unprotected power traces are not in the way we expected. We followed the same way to attack RFTC protected traces. We were not be able to find any similarities in the plotted power traces. When it is unprotected, we human can easilt identify those 10 rounds, but in this case it is not possible. We attacked with our existing models but they gave success rate zero and accuracy almost less than 25% all the time. 
+
+Then we did data preprocessing using Fast Fourier Transform. But in this case also we were not able to get success rate greater than 1. Then we did some filtering, it means we filtered similar traces out of 1 million traces. For RFTC protected we used 1 million traces here. After we filtered, and we used our MLP and CNN models to attack, but that also didnt work as expected.
+<p align="center">
+  <img src="./docs/images/protected_trace.png" alt="Diagram showing SCA" width="440" height="250">
+</p>
+<p align="center">
+  <img src="./docs/images/protected_trace_fft.png" alt="Diagram showing SCA" width="440" height="250">
+</p>
+<p align="center">
+  <img src="./docs/images/filtered_traces.png" alt="Diagram showing SCA" width="440" height="250">
+</p>
