@@ -7,7 +7,7 @@
 + [Power Traces](#power_traces)
 + [Create H5 dataset](#create_h5)
 + [Attacking unprotected AES](#attack_unprotected_aes)
-+ [Attacking rftc protected AES](#attack_rftc_protected_aes)
++ [Attacking RFTC protected AES](#attack_rftc_protected_aes)
 
 
 ___
