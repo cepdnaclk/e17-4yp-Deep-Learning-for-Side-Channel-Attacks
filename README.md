@@ -7,6 +7,8 @@
 + [Power Traces](#power_traces)
 + [Create H5 dataset](#create_h5)
 + [Attacking unprotected AES](#attack_unprotected_aes)
++ [Attacking rftc protected AES](#attack_rftc_protected_aes)
+
 
 ___
 
@@ -102,7 +104,7 @@ To find the most suitable model and parameters to attack the target system, we f
 
 <hr>
 
-## Attacking RFTC protected AES <a name="attack_protected_aes"></a>
+## Attacking RFTC protected AES <a name="attack_rftc_protected_aes"></a>
 
 After attacking unprotected traces we got some experience on how deal with traces. But for unprotected power traces are not in the way we expected. We followed the same way to attack RFTC protected traces. We were not be able to find any similarities in the plotted power traces. When it is unprotected, we human can easilt identify those 10 rounds, but in this case it is not possible. We attacked with our existing models but they gave success rate zero and accuracy almost less than 25% all the time. 
 
