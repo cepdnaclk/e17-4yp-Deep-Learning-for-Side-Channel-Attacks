@@ -71,7 +71,7 @@ RFTC utilizes the flexibility of clock managers in Field-Programmable Gate Array
 
 ![RFTC](./images/rftc.png)
 <div align="center">
-  <img src="./images/rftc.png" alt="RFTC" width="500" height="250">
+  <img src="./images/rftc.png" alt="RFTC" width="400" height="150">
 </div>
 
 The effectiveness of this clock randomization approach is evaluated through Correlation Power Analysis (CPA) attacks conducted on collected power traces. Various preprocessing techniques such as Dynamic Time Warping (DTW), Principal Component Analysis (PCA), and Fast Fourier Transform (FFT) are employed on the power traces to assess the removal of patterns resulting from random execution
