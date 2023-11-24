@@ -78,7 +78,7 @@ The field of Deep Learning-based SCA attacks is rapidly evolving, with numerous 
 
 [//]: # ( NOTE: EDIT THIS LINKS WITH YOUR REPO DETAILS )
 
-- [Project Repository](https://github.com/cepdnaclk/repository-name)
+- [Project Repository](https://github.com/cepdnaclk/e17-4yp-Deep-Learning-for-Side-Channel-Attacks)
 - [Project Page](https://cepdnaclk.github.io/repository-name)
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
