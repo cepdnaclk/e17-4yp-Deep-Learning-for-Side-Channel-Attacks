@@ -96,6 +96,54 @@ Consequently, we adjusted our approach to isolate similar traces, utilizing a co
 
 ## Results and Analysis
 
+### Attacking Unprotected AES
+
++ We used some previously collected 100,000 power traces to train the model and attack AES without any countermeasures.
++ Attacks using basic MLP and CNN models were carried out using those power traces to find the model and parameters that fit best for attacking the AES circuit that was used to collect the traces.
++ We used 60000 power traces for training the models and 40000 power traces for attacking.
+
+#### Using MLP
++ We found that the leakage model for carrying out successful attacks using the basic MLP model built in AISY, was the identity leakage model.
++ For the attacks carried out on the Sbox state of round 1 of AES in the encryption direction and got higher success rates for a majority of key bytes.
++ We achieved following significant results;
+    + Byte 0 - 60%
+    + Byte 1 - 100%
+    + Byte 3 - 100%
+    + Byte 4 - 100%
+    + Byte 5 - 100%
+    + Byte 10 - 100%
+    + Byte 11 - 100%
+    + Byte 13 - 81%
+    + Byte 14 - 100%
+    + Byte 15 - 100%
+
+#### Using CNN
++ As with MLP, we found that the identity leakage model fits best for attacking the target system using CNN also.
++ We attacked the Sbox state of round 1 of AES in the encryption direction. We achieved better results compared to the previously used basic MLP model.
++ We achieved following significant results;
+    + Byte 0 - 100%
+    + Byte 1 - 100%
+    + Byte 3 - 100%
+    + Byte 4 - 100%
+    + Byte 5 - 100%
+    + Byte 6 - 100%
+    + Byte 7 - 99%
+    + Byte 11 - 100%
+    + Byte 13 - 100%
+    + Byte 14 - 100%
+    + Byte 15 - 100%
++ Only 25000 traces were required for revealing the 15th key byte. For other key bytes, 30000 to 40000 traces were required.
+
+### Attacking RFTC-Protected AES
+
+For attacking RFTC-protected AES, we used 1000000 traces: 600000 for training and 400000 for attacking. Using the same models and the same leakage model, batch size, and number of epochs, we attacked the Sbox state of round 1 of RFTC-protected AES, but those attacks weren’t successful. Even using all the 400000 power traces, we weren’t able to successfully attack any key byte of RFTC-protected AES.
+
+Next, we filtered a set of similar traces from the power traces we obtained from RFTC-protected AES using correlation coefficients. But, in the filtered dataset, there were only 34008 power traces in the training set and 22672 power traces in the attack set. We carried out attacks using these data, but those attacks were unsuccessful. We did not try filtering the power traces obtained from unprotected AES because all the traces are very similar to each other.
+
+Then we used the Fast Fourier transform on protected traces and used the transformed traces to attack unprotected AES. This was done expecting to compare the results with RFTC-protected AES traces when FFT is applied to them. Figure number and Figure number show a transformed unprotected AES trace and a transformed RFTC-protected AES trace, respectively. But those attacks also were unsuccessful.
+
+Attacks carried out on RFTC-protected AES implementation were unsuccessful due to several reasons. The main reason was the randomness of the frequencies of the power traces. Because of this, identifying the rounds of AES in the attack traces was really hard. Here, we assumed that the first 100 samples included the first two rounds. Attacking using filtered similar traces was unsuccessful because of the insufficient number of traces in the dataset.
+
 ## Conclusion
 
 ## Publications
