@@ -19,8 +19,9 @@ title: Investigating Machine Learning-based Attacks on Random Frequency Tuning-b
 
 #### Supervisors
 
-- Name, [email](mailto:name@eng.pdn.ac.lk)
-- Name, [email](mailto:name@eng.pdn.ac.lk)
+- Damayanthi Herath, [damayanthiherath@eng.pdn.ac.lk](mailto:damayanthiherath@eng.pdn.ac.lk)
+- Manjula Sandirigama, [manjula.sandirigama@eng.pdn.ac.lk](mailto:manjula.sandirigama@eng.pdn.ac.lk)
+- Darshana Jayasinghe, [darshana.jayasinghe@gmail.com](mailto:darshana.jayasinghe@gmail.com)
 
 #### Table of content
 
