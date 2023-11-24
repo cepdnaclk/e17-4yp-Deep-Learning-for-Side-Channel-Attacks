@@ -69,9 +69,8 @@ As mentioned in the template attack, the dimensionality issue is discussed as a 
 ##### Random Frequency Tuning-based Countermeasures - RFTC
 RFTC utilizes the flexibility of clock managers in Field-Programmable Gate Arrays (FPGAs) like the Xilinx Mixed-Mode Clock Manager (MMCM). By dynamically adjusting the operating frequency, RFTC implements the Advanced Encryption Standard (AES) block cipher algorithm using randomly chosen clock frequencies from a vast set. This method aims to reduce vulnerabilities to power analysis attacks.
 
-![RFTC](./images/rftc.png)
 <div align="center">
-  <img src="./images/rftc.png" alt="RFTC" width="400" height="150">
+  <img src="./images/rftc.png" alt="RFTC" width="450" height="200">
 </div>
 
 The effectiveness of this clock randomization approach is evaluated through Correlation Power Analysis (CPA) attacks conducted on collected power traces. Various preprocessing techniques such as Dynamic Time Warping (DTW), Principal Component Analysis (PCA), and Fast Fourier Transform (FFT) are employed on the power traces to assess the removal of patterns resulting from random execution
