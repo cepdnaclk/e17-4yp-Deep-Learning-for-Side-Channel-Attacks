@@ -143,7 +143,7 @@ Next, we filtered a set of similar traces from the power traces we obtained from
 Then we used the Fast Fourier transform on both unprotected and protected traces and used the transformed traces to attack both systems. We attacked unprotected AES, expecting to compare the results with RFTC-protected AES traces when FFT is applied to them. Eventhough attacks on unprotected AES were successful, attacks on RFTC-protected AES were unsuccessful.
 
 <div align="center">
-  <img src="./images/fft_on_unprotected_trace.jpg" alt="FFT_on_Unprotected_Trace" width = 10 height = 5>
+  <img src="./images/fft_on_unprotected_trace.jpg" alt="FFT_on_Unprotected_Trace">
   <p><em>Unprotected trace which is transformed using FFT</em></p>
 </div>
 
