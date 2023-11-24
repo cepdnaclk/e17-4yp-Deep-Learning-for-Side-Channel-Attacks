@@ -43,51 +43,18 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 
 ## Abstract
-Side-channel attacks (SCAs) pose a significant threat to the 
-security of cryptographic systems, as they exploit unintended 
-information leakage through side channels such as power 
-consumption, timing variations, or electromagnetic radiation. 
-These attacks aim to extract sensitive information, like secret 
-keys, by analyzing the physical implementations (as mentioned 
-above) of a cryptographic device rather than directly breaking 
-the algorithm.
-In recent years, deep learning (DL) techniques have gained 
-considerable attention and success in various fields, and do- 
-mains. When we speak about Deep Learning algorithms, 
-we have Recurrent Neural Networks (RNNs), Long Short- 
-Term Memory (LSTM), Generative Adversarial Networks 
-(GANs), Reinforcement Learning (RL), Deep neural networks 
-(DNNs), Convolutional neural networks (CNNs), etc. Each 
-algorithm has its strengths and applications. The choice of 
-algorithm depends on the nature of the problem or issue 
-and the characteristics of the data. But most of the cases 
-have been captured by Deep neural networks (DNNs) and 
-Convolutional Neural Networks (CNNs). Both algorithms have 
-shown remarkable capabilities in capturing complex patterns 
-and extracting meaningful features from high-dimensional 
-data. When we went through related research or publications 
-Convolutional Neural Networks has played a major role.
-Deep Learning based SCA attacks leverages the power of 
-neural networks to learn the complex relationship between 
-the observed side-channel leakage and the underlying secret 
-key even without knowing the algorithm. By training DL 
-models on a large number of datasets of side-channel mea- 
-surements or traces, these attacks can enhance the efficiency
-and accuracy of information extraction, even in the presence 
-of countermeasures. Training DL models requires substantial 
-amounts of labeled training data, which may be costly or time- 
-consuming to obtain. But, currently, it’s not a big issue since 
-some research in this field has already addressed these issues.
-This field, Deep Learning based SCA attacks is rapidly 
-evolving, and numerous research papers have been published. 
-These papers explore various aspects, including the design and 
-architecture of DL models, the impact of different network 
-configurations on attack performance, and the effectiveness of 
-DL-based attacks against different cryptographic devices and 
-countermeasures
+Side-channel attacks (SCAs) pose a significant threat to the security of cryptographic systems. These attacks exploit unintended information leakage through side channels such as power consumption, timing variations, or electromagnetic radiation. Rather than directly breaking the algorithm, SCAs aim to extract sensitive information like secret keys by analyzing the physical implementations of cryptographic devices.
+
+In recent years, deep learning (DL) techniques, including Recurrent Neural Networks (RNNs), Long Short-Term Memory (LSTM), Generative Adversarial Networks (GANs), Reinforcement Learning (RL), Deep Neural Networks (DNNs), and Convolutional Neural Networks (CNNs), have gained considerable attention and success across various fields. Each algorithm has its strengths and applications, with DNNs and CNNs often capturing most cases due to their capabilities in handling complex patterns and extracting meaningful features from high-dimensional data. Convolutional Neural Networks, in particular, have played a significant role in related research and publications.
+
+Deep Learning-based SCA attacks leverage neural networks to learn complex relationships between observed side-channel leakage and underlying secret keys, even without knowledge of the algorithm used. By training DL models on large datasets of side-channel measurements or traces, these attacks enhance the efficiency and accuracy of information extraction, even in the presence of countermeasures. Although training DL models requires substantial labeled data, recent research has addressed issues related to data availability and cost.
+
+The field of Deep Learning-based SCA attacks is rapidly evolving, with numerous research papers exploring various aspects. These include the design and architecture of DL models, the impact of different network configurations on attack performance, and the effectiveness of DL-based attacks against different cryptographic devices and countermeasures.
 
 
 ## Related works
+
+
 
 ## Methodology
 
