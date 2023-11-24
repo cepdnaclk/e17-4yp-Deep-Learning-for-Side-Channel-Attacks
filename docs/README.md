@@ -177,7 +177,6 @@ In conclusion, our research contributes valuable insights to the field of side-c
 <!-- 4. [Semester 8 slides](./) -->
 <!-- 5. Author 1, Author 2 and Author 3 "Research paper title" (2021). [PDF](./). -->
 
-....pending
 
 
 ## Links
