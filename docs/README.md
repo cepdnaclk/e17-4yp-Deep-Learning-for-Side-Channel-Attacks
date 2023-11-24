@@ -60,13 +60,13 @@ We are mainly targetting counter measure Runtime Frequency Tuning Countermeasure
 
 
 ## Related works
-##### Template Attack
+##### 1. Template Attack
 Template attacks involve a pre-computation phase where the attacker gathers side-channel traces, known plaintexts, and secret keys. This phase includes statistical analysis on these traces. However, as the number of side-channel features increases, the data space's dimensionality grows, leading to sparse data in high-dimensional spaces. This sparsity makes accurate statistical modeling and pattern capture challenging. Analyzing data becomes computationally expensive and time-consuming due to the exponential increase in dimensions. Two prominent approaches in recent years are template attacks and machine learning-based attacks. Template attacks excel when few Points of Interest (POI) in leakage traces carry most information. Conversely, machine learning-based attacks become more favorable as useless samples in leakage traces increase.
 
-##### Machine Learning Based Attack
+##### 2. Machine Learning Based Attack
 As mentioned in the template attack, the dimensionality issue is discussed as a ”curse of dimensionality” in publications. Dimension reduction techniques like PCA (Principal Component Analysis) and LDA (Linear Discriminant Analysis) can be used to overcome this problems. Research primarily revolves around machine learning attacks on PRESENT and AES in channel analysis. Classical machine learning techniques like Random Forest, Support Vector Machines, Naive Bayes, and multilayer perceptrons have been extensively explored and valued for their effectiveness across domains. For instance, Random Forest uses decision tree ensembles for predictions, while Naive Bayes, based on Bayes' theorem, is commonly used for text classification and spam filtering. The emerging field of deep learning sees a focus on Deep Neural Networks (DNNs) and Convolutional Neural Networks (CNNs) in most papers.
 
-##### Random Frequency Tuning-based Countermeasures - RFTC
+##### 3. Random Frequency Tuning-based Countermeasures - RFTC
 RFTC utilizes the flexibility of clock managers in Field-Programmable Gate Arrays (FPGAs) like the Xilinx Mixed-Mode Clock Manager (MMCM). By dynamically adjusting the operating frequency, RFTC implements the Advanced Encryption Standard (AES) block cipher algorithm using randomly chosen clock frequencies from a vast set. This method aims to reduce vulnerabilities to power analysis attacks.
 
 <div align="center">
@@ -111,7 +111,7 @@ Consequently, we adjusted our approach to isolate similar traces, utilizing a co
 + Attacks using basic MLP and CNN models were carried out using those power traces to find the model and parameters that fit best for attacking the AES circuit that was used to collect the traces.
 + We used 60000 power traces for training the models and 40000 power traces for attacking.
 
-##### Using MLP
+##### 1. Using MLP
 + We found that the leakage model for carrying out successful attacks using the basic MLP model built in AISY, was the identity leakage model.
 + For the attacks carried out on the Sbox state of round 1 of AES in the encryption direction and got higher success rates for a majority of key bytes.
 + We achieved following significant results;
@@ -126,7 +126,7 @@ Consequently, we adjusted our approach to isolate similar traces, utilizing a co
     + Byte 14 - 100%
     + Byte 15 - 100%
 
-##### Using CNN
+##### 2. Using CNN
 + As with MLP, we found that the identity leakage model fits best for attacking the target system using CNN also.
 + We attacked the Sbox state of round 1 of AES in the encryption direction. We achieved better results compared to the previously used basic MLP model.
 + We achieved following significant results;
@@ -143,7 +143,7 @@ Consequently, we adjusted our approach to isolate similar traces, utilizing a co
     + Byte 15 - 100%
 + Only 25000 traces were required for revealing the 15th key byte. For other key bytes, 30000 to 40000 traces were required.
 
-##### Attacking RFTC-Protected AES
+##### 3. Attacking RFTC-Protected AES
 
 For attacking RFTC-protected AES, we used 1000000 traces: 600000 for training and 400000 for attacking. Using the same models and the same leakage model, batch size, and number of epochs, we attacked the Sbox state of round 1 of RFTC-protected AES, but those attacks weren’t successful. Even using all the 400000 power traces, we weren’t able to successfully attack any key byte of RFTC-protected AES.
 
@@ -171,8 +171,8 @@ In conclusion, our research contributes valuable insights to the field of side-c
 ## Publications
 [//]: # "Note: Uncomment each once you uploaded the files to the repository"
 
-<!-- 1. [Semester 7 report](./) -->
-<!-- 2. [Semester 7 slides](./) -->
+1. [Semester 7 slides](./) 
+2. [Semester 8 slides](./)
 <!-- 3. [Semester 8 report](./) -->
 <!-- 4. [Semester 8 slides](./) -->
 <!-- 5. Author 1, Author 2 and Author 3 "Research paper title" (2021). [PDF](./). -->
