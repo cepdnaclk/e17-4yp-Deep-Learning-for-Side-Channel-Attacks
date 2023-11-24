@@ -3,7 +3,7 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: eYY-4yp-project-template
+repository-name: [eYY-4yp-project-template](https://github.com/cepdnaclk/e17-4yp-Deep-Learning-for-Side-Channel-Attacks)
 title:Investigating Machine Learning-based Attacks on Random Frequency Tuning-based Countermeasures
 ---
 
