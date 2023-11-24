@@ -117,7 +117,7 @@ Consequently, we adjusted our approach to isolate similar traces, utilizing a co
     + Byte 14 - 100%
     + Byte 15 - 100%
 
-#### Using MLP
+#### Using CNN
 + As with MLP, we found that the identity leakage model fits best for attacking the target system using CNN also.
 + We attacked the Sbox state of round 1 of AES in the encryption direction. We achieved better results compared to the previously used basic MLP model.
 + We achieved following significant results;
