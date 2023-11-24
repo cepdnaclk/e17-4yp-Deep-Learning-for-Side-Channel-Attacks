@@ -4,7 +4,7 @@ permalink: index.html
 
 # Please update this with your repository name and title
 repository-name: https://github.com/cepdnaclk/e17-4yp-Deep-Learning-for-Side-Channel-Attacks
-title:Investigating Machine Learning-based Attacks on Random Frequency Tuning-based Countermeasures
+title: Investigating Machine Learning-based Attacks on Random Frequency Tuning-based Countermeasures
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
