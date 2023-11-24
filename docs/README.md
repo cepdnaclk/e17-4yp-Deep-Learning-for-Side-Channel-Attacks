@@ -140,7 +140,13 @@ For attacking RFTC-protected AES, we used 1000000 traces: 600000 for training an
 
 Next, we filtered a set of similar traces from the power traces we obtained from RFTC-protected AES using correlation coefficients. But, in the filtered dataset, there were only 34008 power traces in the training set and 22672 power traces in the attack set. We carried out attacks using these data, but those attacks were unsuccessful. We did not try filtering the power traces obtained from unprotected AES because all the traces are very similar to each other.
 
-Then we used the Fast Fourier transform on protected traces and used the transformed traces to attack unprotected AES. This was done expecting to compare the results with RFTC-protected AES traces when FFT is applied to them. Figure number and Figure number show a transformed unprotected AES trace and a transformed RFTC-protected AES trace, respectively. But those attacks also were unsuccessful.
+Then we used the Fast Fourier transform on both unprotected and protected traces and used the transformed traces to attack both systems. We attacked unprotected AES, expecting to compare the results with RFTC-protected AES traces when FFT is applied to them. Eventhough attacks on unprotected AES were successful, attacks on RFTC-protected AES were unsuccessful.
+
+![FFT_on_Unprotected_Trace](./images/fft_on_unprotected_trace.jpg")
+*Caption: Unprotected trace which is transformed using FFT*
+
+![FFT_on_Unprotected_Trace](./images/protected_trace_fft.jpg)
+*Caption: RFTC-protected trace which is transformed using FFT*
 
 Attacks carried out on RFTC-protected AES implementation were unsuccessful due to several reasons. The main reason was the randomness of the frequencies of the power traces. Because of this, identifying the rounds of AES in the attack traces was really hard. Here, we assumed that the first 100 samples included the first two rounds. Attacking using filtered similar traces was unsuccessful because of the insufficient number of traces in the dataset.
 
