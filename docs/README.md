@@ -76,6 +76,25 @@ The effectiveness of this clock randomization approach is evaluated through Corr
 
 ## Methodology
 
+The experiments were conducted using an FPGA prototype board equipped with an isolated power line and signal amplifier.Meticulous preservation of power traces, which detailed voltage fluctuations during cryptographic operations, was essential. These traces were stored in a binary file format for detailed examination and confirmation purposes.We possessed binary files containing essential data, including plaintexts, ciphertexts, keys, and power traces.we aimed to segregate these files into a strategic split into profiling and training datasets. Typically, we adhere to conventional splits such as 70%-30% or 80%-20% for this purpose.
+
+To ensure smooth handling of datasets and power traces, we employed the SASEBO process, a trusted method for their separation. Our research required a deep learning framework tailored for side-channel analysis, specifically targeting AES encryptions. The AISY framework served as our solution, offering a user-centric web application with an intuitive interface for visualizing analyses and presenting results effectively. Aligning with AISY's requirements, we converted our datasets into the .h5 format, utilizing a dedicated code snippet provided by the framework's creators for this purpose.
+
+When examining unprotected power traces, we extensively plotted and analyzed them. Identifying all 10 rounds was relatively simple as they aligned with a single frequency usage.
+
+![unprotected_trace](./images/unprotected_trace.png)
+
+To enhance our results, we employed both existing and customized models (MLP and CNN models), ensuring consistency in our data partitions. Our efforts aimed at achieving higher success rates led us to conduct attacks, leveraging leakage models like Hamming Distance, Hamming Weight, Identity, and bits. Throughout our experiments, we adjusted parameters such as epochs, batch sizes, optimizers, and activation functions in pursuit of increased success rates
+
+
+
+
+
+
+
+
+
+
 ## Experiment Setup and Implementation
 
 ## Results and Analysis
