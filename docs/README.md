@@ -94,8 +94,6 @@ When addressing RFTC-protected power traces, we consistently encountered a zero 
 Consequently, we adjusted our approach to isolate similar traces, utilizing a correlation coefficient. By setting a threshold of correlation coefficient higher than 0.75, we filtered and retained only those traces exhibiting significant similarity. Additionally, we integrated FFT as part of our preprocessing steps to further refine the data.
 
 
-## Experiment Setup and Implementation
-
 ## Results and Analysis
 
 ## Conclusion
