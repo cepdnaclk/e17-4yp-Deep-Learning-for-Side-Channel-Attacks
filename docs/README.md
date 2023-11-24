@@ -54,6 +54,8 @@ Deep Learning-based SCA attacks leverage neural networks to learn complex relati
 
 The field of Deep Learning-based SCA attacks is rapidly evolving, with numerous research papers exploring various aspects. These include the design and architecture of DL models, the impact of different network configurations on attack performance, and the effectiveness of DL-based attacks against different cryptographic devices and countermeasures.
 
+We are mainly targetting counter measure Runtime Frequency Tuning Countermeasure (RFTC). It is a random execution time countermeasure based on frequency randomization. In RFTC, the clock frequencies are chosen randomly from 3,702 distinct clock frequencies (arranged in 1024 X 3 groups) which are chosen carefully and fixed during design time. These selections are dobe at runtime to mitigate the vulnerabilities of power analysis attacks in FPGAs. to mitigate power analysis attack vulnerabilities of FPGAs. RFTC uses dynamic reconfiguration of clock managers of FPGAs (such as Xilinx Mixed-Mode Clock Manager - MMCM) to generate the desired clock frequencies within FPGA to run cryptographic circuits. No other countermeasure has been proved secure against Dynamic Time Warping based CPA attacks (DTW-CPA), Principal Component Analysis based CPA attacks (PCA-CPA) and Fast Fourier Transform based CPA attacks (FFT-CPA) except for RFTC. But, RFTC was not tested against deep learning based SCAs.
+
 
 ## Related works
 
