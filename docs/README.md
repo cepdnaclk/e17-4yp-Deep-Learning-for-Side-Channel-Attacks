@@ -146,6 +146,12 @@ Attacks carried out on RFTC-protected AES implementation were unsuccessful due t
 
 ## Conclusion
 
+The results of our attacks on unprotected AES using basic MLP and CNN models revealed substantial success rates, particularly when employing the identity leakage model and targeting the Sbox state of round 1. The subsequent application of the basic CNN model further improved success rates, demonstrating the adaptability of our approach. However, when turning our attention to RFTC-protected AES, a marked lack of success emerged, primarily attributed to the inherent randomness in power trace frequencies.
+
+The alignment process, specifically through correlation-based filtering, yielded unexpected results, prompting a reconsideration of the durability of this mechanism. Additionally, the strategic use of the Fast Fourier Transform (FFT) on protected traces aimed at evaluating its impact on success rates revealed complexities in frequency domain analysis, emphasizing the need for a nuanced understanding of cryptographic evaluations.
+
+In conclusion, our research contributes valuable insights to the field of side-channel attacks on AES implementations, shedding light on the effectiveness of different models and methodologies. The unexpected outcomes prompt a reevaluation of certain techniques and highlight the necessity for a nuanced understanding of cryptographic nuances in various security scenarios. As the landscape of encryption continues to evolve, our findings underscore the importance of adaptability and flexibility in the methodologies employed for comprehensive cryptographic analysis.
+
 ## Publications
 [//]: # "Note: Uncomment each once you uploaded the files to the repository"
 
