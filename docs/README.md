@@ -115,7 +115,7 @@ Consequently, we adjusted our approach to isolate similar traces, utilizing a co
 [//]: # ( NOTE: EDIT THIS LINKS WITH YOUR REPO DETAILS )
 
 - [Project Repository](https://github.com/cepdnaclk/e17-4yp-Deep-Learning-for-Side-Channel-Attacks)
-- [Project Page](https://cepdnaclk.github.io/repository-name)
+- [Project Page](https://cepdnaclk.github.io/e17-4yp-Deep-Learning-for-Side-Channel-Attacks/)
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
 
