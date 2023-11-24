@@ -48,7 +48,9 @@ Side-channel attacks (SCAs) pose a significant threat to the security of cryptog
 
 In recent years, deep learning (DL) techniques, including Recurrent Neural Networks (RNNs), Long Short-Term Memory (LSTM), Generative Adversarial Networks (GANs), Reinforcement Learning (RL), Deep Neural Networks (DNNs), and Convolutional Neural Networks (CNNs), have gained considerable attention and success across various fields. Each algorithm has its strengths and applications, with DNNs and CNNs often capturing most cases due to their capabilities in handling complex patterns and extracting meaningful features from high-dimensional data. Convolutional Neural Networks, in particular, have played a significant role in related research and publications.
 
-![SCA](./images/SCA.png) 
+<div align="center">
+  <img src="./images/SCA.png" alt="SCA" width="700" height="350">
+</div>
 
 Deep Learning-based SCA attacks leverage neural networks to learn complex relationships between observed side-channel leakage and underlying secret keys, even without knowledge of the algorithm used. By training DL models on large datasets of side-channel measurements or traces, these attacks enhance the efficiency and accuracy of information extraction, even in the presence of countermeasures. Although training DL models requires substantial labeled data, recent research has addressed issues related to data availability and cost.
 
@@ -67,8 +69,9 @@ As mentioned in the template attack, the dimensionality issue is discussed as a 
 ##### Random Frequency Tuning-based Countermeasures - RFTC
 RFTC utilizes the flexibility of clock managers in Field-Programmable Gate Arrays (FPGAs) like the Xilinx Mixed-Mode Clock Manager (MMCM). By dynamically adjusting the operating frequency, RFTC implements the Advanced Encryption Standard (AES) block cipher algorithm using randomly chosen clock frequencies from a vast set. This method aims to reduce vulnerabilities to power analysis attacks.
 
-![RFTC](./images/rftc.png)
-
+<div align="center">
+  <img src="./images/rftc.png" alt="RFTC" width="470" height="200">
+</div>
 
 The effectiveness of this clock randomization approach is evaluated through Correlation Power Analysis (CPA) attacks conducted on collected power traces. Various preprocessing techniques such as Dynamic Time Warping (DTW), Principal Component Analysis (PCA), and Fast Fourier Transform (FFT) are employed on the power traces to assess the removal of patterns resulting from random execution
 
@@ -81,7 +84,9 @@ To ensure smooth handling of datasets and power traces, we employed the SASEBO p
 
 When examining unprotected power traces, we extensively plotted and analyzed them. Identifying all 10 rounds was relatively simple as they aligned with a single frequency usage.
 
-![unprotected_trace](./images/unprotected_trace.png)
+<div align="center">
+  <img src="./images/unprotected_trace.png" alt="unprotected_trace" width="600" height="300">
+</div>
 
 To enhance our results, we employed both existing and customized models (MLP and CNN models), ensuring consistency in our data partitions. Our efforts aimed at achieving higher success rates led us to conduct attacks, leveraging leakage models like Hamming Distance, Hamming Weight, Identity, and bits. Throughout our experiments, we adjusted parameters such as epochs, batch sizes, optimizers, and activation functions in pursuit of increased success rates
 
@@ -89,7 +94,9 @@ In our data preprocessing phase, we integrated the Fast Fourier Transform (FFT) 
 
 When addressing RFTC-protected power traces, we consistently encountered a zero success rate. The visualization of power trace data posed challenges in distinguishing between rounds.
 
-![protected_trace](./images/protected_trace.png)
+<div align="center">
+  <img src="./images/protected_trace.png" alt="protected_trace" width="600" height="300">
+</div>
 
 Consequently, we adjusted our approach to isolate similar traces, utilizing a correlation coefficient. By setting a threshold of correlation coefficient higher than 0.75, we filtered and retained only those traces exhibiting significant similarity. Additionally, we integrated FFT as part of our preprocessing steps to further refine the data.
 
@@ -140,7 +147,14 @@ For attacking RFTC-protected AES, we used 1000000 traces: 600000 for training an
 
 Next, we filtered a set of similar traces from the power traces we obtained from RFTC-protected AES using correlation coefficients. But, in the filtered dataset, there were only 34008 power traces in the training set and 22672 power traces in the attack set. We carried out attacks using these data, but those attacks were unsuccessful. We did not try filtering the power traces obtained from unprotected AES because all the traces are very similar to each other.
 
-Then we used the Fast Fourier transform on protected traces and used the transformed traces to attack unprotected AES. This was done expecting to compare the results with RFTC-protected AES traces when FFT is applied to them. Figure number and Figure number show a transformed unprotected AES trace and a transformed RFTC-protected AES trace, respectively. But those attacks also were unsuccessful.
+Then we used the Fast Fourier transform on both unprotected and protected traces and used the transformed traces to attack both systems. We attacked unprotected AES, expecting to compare the results with RFTC-protected AES traces when FFT is applied to them. Eventhough attacks on unprotected AES were successful, attacks on RFTC-protected AES were unsuccessful.
+
+<div align="center">
+  <img src="./images/fft_on_unprotected_trace.jpg" alt="FFT_on_Unprotected_Trace" width="600" height="300">
+  <p><em>Unprotected trace which is transformed using FFT</em></p>
+  <img src="./images/protected_trace_fft.png" alt="FFT_on_protected_Trace" width="600" height="300">
+  <p><em>RFTC-protected trace which is transformed using FFT</em></p>
+</div>
 
 Attacks carried out on RFTC-protected AES implementation were unsuccessful due to several reasons. The main reason was the randomness of the frequencies of the power traces. Because of this, identifying the rounds of AES in the attack traces was really hard. Here, we assumed that the first 100 samples included the first two rounds. Attacking using filtered similar traces was unsuccessful because of the insufficient number of traces in the dataset.
 
