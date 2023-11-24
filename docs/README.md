@@ -38,15 +38,17 @@ title: Investigating Machine Learning-based Attacks on Random Frequency Tuning-b
 <!-- 
 DELETE THIS SAMPLE before publishing to GitHub Pages !!!
 This is a sample image, to show how to add images to your page. To learn more options, please refer [this](https://projects.ce.pdn.ac.lk/docs/faq/how-to-add-an-image/)
--->
-![Sample Image](./images/sample.png) 
 
+![Sample Image](./images/sample.png) 
+-->
 
 
 ## Abstract
 Side-channel attacks (SCAs) pose a significant threat to the security of cryptographic systems. These attacks exploit unintended information leakage through side channels such as power consumption, timing variations, or electromagnetic radiation. Rather than directly breaking the algorithm, SCAs aim to extract sensitive information like secret keys by analyzing the physical implementations of cryptographic devices.
 
 In recent years, deep learning (DL) techniques, including Recurrent Neural Networks (RNNs), Long Short-Term Memory (LSTM), Generative Adversarial Networks (GANs), Reinforcement Learning (RL), Deep Neural Networks (DNNs), and Convolutional Neural Networks (CNNs), have gained considerable attention and success across various fields. Each algorithm has its strengths and applications, with DNNs and CNNs often capturing most cases due to their capabilities in handling complex patterns and extracting meaningful features from high-dimensional data. Convolutional Neural Networks, in particular, have played a significant role in related research and publications.
+
+![SCA](./images/SCA.png) 
 
 Deep Learning-based SCA attacks leverage neural networks to learn complex relationships between observed side-channel leakage and underlying secret keys, even without knowledge of the algorithm used. By training DL models on large datasets of side-channel measurements or traces, these attacks enhance the efficiency and accuracy of information extraction, even in the presence of countermeasures. Although training DL models requires substantial labeled data, recent research has addressed issues related to data availability and cost.
 
