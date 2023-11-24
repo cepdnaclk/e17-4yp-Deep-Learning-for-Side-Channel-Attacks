@@ -13,9 +13,9 @@ title:
 
 #### Team
 
-- eNumber, Name, [email](mailto:name@email.com)
-- eNumber, Name, [email](mailto:name@email.com)
-- eNumber, Name, [email](mailto:name@email.com)
+- E17038, Chandrasekara C.M.A, [e17038@eng.pdn.ac.lk](mailto:e17038@eng.pdn.ac.lk)
+- E17101, Gunathilaka S.P.A.U, [e17101@eng.pdn.ac.lk](mailto:e17101@eng.pdn.ac.lk)
+- E17292, Rilwan M M M , [e17292@eng.pdn.ac.lk](mailto:e17292@eng.pdn.ac.lk)
 
 #### Supervisors
 
