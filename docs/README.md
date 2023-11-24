@@ -171,8 +171,8 @@ In conclusion, our research contributes valuable insights to the field of side-c
 ## Publications
 [//]: # "Note: Uncomment each once you uploaded the files to the repository"
 
-1. [Semester 7 slides](./) 
-2. [Semester 8 slides](./)
+1. [Semester 7 slides](./sem7.pptx) 
+2. [Semester 8 slides](./sem8.pptx)
 <!-- 3. [Semester 8 report](./) -->
 <!-- 4. [Semester 8 slides](./) -->
 <!-- 5. Author 1, Author 2 and Author 3 "Research paper title" (2021). [PDF](./). -->
