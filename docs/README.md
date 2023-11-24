@@ -58,16 +58,17 @@ We are mainly targetting counter measure Runtime Frequency Tuning Countermeasure
 
 
 ## Related works
-#### Template Attack
+##### Template Attack
 Template attacks involve a pre-computation phase where the attacker gathers side-channel traces, known plaintexts, and secret keys. This phase includes statistical analysis on these traces. However, as the number of side-channel features increases, the data space's dimensionality grows, leading to sparse data in high-dimensional spaces. This sparsity makes accurate statistical modeling and pattern capture challenging. Analyzing data becomes computationally expensive and time-consuming due to the exponential increase in dimensions. Two prominent approaches in recent years are template attacks and machine learning-based attacks. Template attacks excel when few Points of Interest (POI) in leakage traces carry most information. Conversely, machine learning-based attacks become more favorable as useless samples in leakage traces increase.
 
-#### Machine Learning Based Attack
+##### Machine Learning Based Attack
 As mentioned in the template attack, the dimensionality issue is discussed as a ”curse of dimensionality” in publications. Dimension reduction techniques like PCA (Principal Component Analysis) and LDA (Linear Discriminant Analysis) can be used to overcome this problems. Research primarily revolves around machine learning attacks on PRESENT and AES in channel analysis. Classical machine learning techniques like Random Forest, Support Vector Machines, Naive Bayes, and multilayer perceptrons have been extensively explored and valued for their effectiveness across domains. For instance, Random Forest uses decision tree ensembles for predictions, while Naive Bayes, based on Bayes' theorem, is commonly used for text classification and spam filtering. The emerging field of deep learning sees a focus on Deep Neural Networks (DNNs) and Convolutional Neural Networks (CNNs) in most papers.
 
-#### Random Frequency Tuning-based Countermeasures - RFTC
+##### Random Frequency Tuning-based Countermeasures - RFTC
 RFTC utilizes the flexibility of clock managers in Field-Programmable Gate Arrays (FPGAs) like the Xilinx Mixed-Mode Clock Manager (MMCM). By dynamically adjusting the operating frequency, RFTC implements the Advanced Encryption Standard (AES) block cipher algorithm using randomly chosen clock frequencies from a vast set. This method aims to reduce vulnerabilities to power analysis attacks.
 
 ![RFTC](./images/rftc.png)
+
 
 The effectiveness of this clock randomization approach is evaluated through Correlation Power Analysis (CPA) attacks conducted on collected power traces. Various preprocessing techniques such as Dynamic Time Warping (DTW), Principal Component Analysis (PCA), and Fast Fourier Transform (FFT) are employed on the power traces to assess the removal of patterns resulting from random execution
 
