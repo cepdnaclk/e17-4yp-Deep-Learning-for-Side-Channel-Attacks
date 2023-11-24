@@ -48,7 +48,10 @@ Side-channel attacks (SCAs) pose a significant threat to the security of cryptog
 
 In recent years, deep learning (DL) techniques, including Recurrent Neural Networks (RNNs), Long Short-Term Memory (LSTM), Generative Adversarial Networks (GANs), Reinforcement Learning (RL), Deep Neural Networks (DNNs), and Convolutional Neural Networks (CNNs), have gained considerable attention and success across various fields. Each algorithm has its strengths and applications, with DNNs and CNNs often capturing most cases due to their capabilities in handling complex patterns and extracting meaningful features from high-dimensional data. Convolutional Neural Networks, in particular, have played a significant role in related research and publications.
 
-![SCA](./images/SCA.png) 
+![SCA](./images/SCA.png)
+<div align="center">
+  <img src="./images/unprotected_trace.png" alt="unprotected_trace" width="700" height="350">
+</div>
 
 Deep Learning-based SCA attacks leverage neural networks to learn complex relationships between observed side-channel leakage and underlying secret keys, even without knowledge of the algorithm used. By training DL models on large datasets of side-channel measurements or traces, these attacks enhance the efficiency and accuracy of information extraction, even in the presence of countermeasures. Although training DL models requires substantial labeled data, recent research has addressed issues related to data availability and cost.
 
@@ -81,7 +84,9 @@ To ensure smooth handling of datasets and power traces, we employed the SASEBO p
 
 When examining unprotected power traces, we extensively plotted and analyzed them. Identifying all 10 rounds was relatively simple as they aligned with a single frequency usage.
 
-![unprotected_trace](./images/unprotected_trace.png)
+<div align="center">
+  <img src="./images/unprotected_trace.png" alt="unprotected_trace" width="600" height="300">
+</div>
 
 To enhance our results, we employed both existing and customized models (MLP and CNN models), ensuring consistency in our data partitions. Our efforts aimed at achieving higher success rates led us to conduct attacks, leveraging leakage models like Hamming Distance, Hamming Weight, Identity, and bits. Throughout our experiments, we adjusted parameters such as epochs, batch sizes, optimizers, and activation functions in pursuit of increased success rates
 
@@ -89,7 +94,9 @@ In our data preprocessing phase, we integrated the Fast Fourier Transform (FFT) 
 
 When addressing RFTC-protected power traces, we consistently encountered a zero success rate. The visualization of power trace data posed challenges in distinguishing between rounds.
 
-![protected_trace](./images/protected_trace.png)
+<div align="center">
+  <img src="./images/protected_trace.png" alt="protected_trace" width="600" height="300">
+</div>
 
 Consequently, we adjusted our approach to isolate similar traces, utilizing a correlation coefficient. By setting a threshold of correlation coefficient higher than 0.75, we filtered and retained only those traces exhibiting significant similarity. Additionally, we integrated FFT as part of our preprocessing steps to further refine the data.
 
