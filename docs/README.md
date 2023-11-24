@@ -142,10 +142,10 @@ Next, we filtered a set of similar traces from the power traces we obtained from
 
 Then we used the Fast Fourier transform on both unprotected and protected traces and used the transformed traces to attack both systems. We attacked unprotected AES, expecting to compare the results with RFTC-protected AES traces when FFT is applied to them. Eventhough attacks on unprotected AES were successful, attacks on RFTC-protected AES were unsuccessful.
 
-![FFT_on_Unprotected_Trace](./images/fft_on_unprotected_trace.jpg")
+![FFT_on_Unprotected_Trace](/images/fft_on_unprotected_trace.jpg)
 *Caption: Unprotected trace which is transformed using FFT*
 
-![FFT_on_Unprotected_Trace](./images/protected_trace_fft.jpg)
+![FFT_on_Unprotected_Trace](/images/protected_trace_fft.jpg)
 *Caption: RFTC-protected trace which is transformed using FFT*
 
 Attacks carried out on RFTC-protected AES implementation were unsuccessful due to several reasons. The main reason was the randomness of the frequencies of the power traces. Because of this, identifying the rounds of AES in the attack traces was really hard. Here, we assumed that the first 100 samples included the first two rounds. Attacking using filtered similar traces was unsuccessful because of the insufficient number of traces in the dataset.
