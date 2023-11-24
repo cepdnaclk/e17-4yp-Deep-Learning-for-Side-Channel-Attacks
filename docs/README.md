@@ -86,6 +86,7 @@ When examining unprotected power traces, we extensively plotted and analyzed the
 
 <div align="center">
   <img src="./images/unprotected_trace.png" alt="unprotected_trace" width="600" height="300">
+  <p><em>Unprotected trace</em></p>
 </div>
 
 To enhance our results, we employed both existing and customized models (MLP and CNN models), ensuring consistency in our data partitions. Our efforts aimed at achieving higher success rates led us to conduct attacks, leveraging leakage models like Hamming Distance, Hamming Weight, Identity, and bits. Throughout our experiments, we adjusted parameters such as epochs, batch sizes, optimizers, and activation functions in pursuit of increased success rates
@@ -96,6 +97,7 @@ When addressing RFTC-protected power traces, we consistently encountered a zero 
 
 <div align="center">
   <img src="./images/protected_trace.png" alt="protected_trace" width="600" height="300">
+  <p><em>RFTC protected trace</em></p>
 </div>
 
 Consequently, we adjusted our approach to isolate similar traces, utilizing a correlation coefficient. By setting a threshold of correlation coefficient higher than 0.75, we filtered and retained only those traces exhibiting significant similarity. Additionally, we integrated FFT as part of our preprocessing steps to further refine the data.
