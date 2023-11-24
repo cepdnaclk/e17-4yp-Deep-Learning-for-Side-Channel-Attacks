@@ -86,13 +86,13 @@ When examining unprotected power traces, we extensively plotted and analyzed the
 
 To enhance our results, we employed both existing and customized models (MLP and CNN models), ensuring consistency in our data partitions. Our efforts aimed at achieving higher success rates led us to conduct attacks, leveraging leakage models like Hamming Distance, Hamming Weight, Identity, and bits. Throughout our experiments, we adjusted parameters such as epochs, batch sizes, optimizers, and activation functions in pursuit of increased success rates
 
+In our data preprocessing phase, we integrated the Fast Fourier Transform (FFT) as a denoising technique for the power trace. Our focus centered on exploring various threshold frequency values—0.1, 0.2, and 0.3—to ascertain the most effective denoising impact.
 
+When addressing RFTC-protected power traces, we consistently encountered a zero success rate. The visualization of power trace data posed challenges in distinguishing between rounds.
 
+![protected_trace](./images/protected_trace.png)
 
-
-
-
-
+Consequently, we adjusted our approach to isolate similar traces, utilizing a correlation coefficient. By setting a threshold of correlation coefficient higher than 0.75, we filtered and retained only those traces exhibiting significant similarity. Additionally, we integrated FFT as part of our preprocessing steps to further refine the data.
 
 
 ## Experiment Setup and Implementation
